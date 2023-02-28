@@ -9,7 +9,7 @@
     <%= article.body %>
   </p>
 
-  <% article.photo.attached? %>
+  <% if article.photo.attached? %>
     <%= cl_image_tag(article.photo.key, height: 200, crop: :fill) %>
   <% end %>
 
